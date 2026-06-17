@@ -4,6 +4,7 @@ dotenv.load_dotenv()
 from openai import OpenAI
 import asyncio
 import streamlit as st
+import re
 
 from agents import (
     Agent,
@@ -41,7 +42,20 @@ async def paint_history():
 
                 else:
                     if message["type"] == "message":
-                        st.write(message["content"][0]["text"].replace("$", "\$"))
+                        content = message["content"][0]
+                        text = content.get("text")
+                        text = re.sub(r"", "", text)# filecite 제거
+
+                        if "annotations" in content:
+                            filenames = set()
+                            for annotation in content.get("annotations", []):
+                                if annotation["type"] == "file_citation":
+                                    filenames.add(annotation.get("filename"))
+
+                            if filenames:
+                                text += "\n\n" + ", ".join(f"[{name}]" for name in filenames)
+                                    
+                        st.write(text.replace("$", "\$"))
                         
         if "type" in message:
             message_type = message["type"]
@@ -153,6 +167,7 @@ prompt = st.chat_input(
     accept_file=True,
     file_type=[
         "txt",
+        "pdf",
         "jpg",
         "jpeg",
         "png",
@@ -164,7 +179,7 @@ if prompt:
         st.session_state["text_placeholder"].empty()
 
     for file in prompt.files:
-        if file.type.startswith("text/"):
+        if (file.type.startswith("text/") or file.type == "application/pdf"):
             with st.chat_message("ai"):
                 with st.status("⏳ Uploading file...") as status:
                     uploaded_file = client.files.create(
