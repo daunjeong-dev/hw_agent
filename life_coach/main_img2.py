@@ -6,6 +6,7 @@ import asyncio
 import base64
 import streamlit as st
 import re
+import os
 
 from agents import (
     Agent,
@@ -18,7 +19,7 @@ from agents import (
 
 client = OpenAI()
 
-VECTOR_STORE_ID = "vs_6a335e645848819197e6b5ddc8282b3f"
+vector_id = os.getenv("VECTOR_STORE_ID")
 
 if "session" not in st.session_state:
     st.session_state["session"] = SQLiteSession(
@@ -181,7 +182,7 @@ async def run_agent(message):
         tools=[
             WebSearchTool(),
             FileSearchTool(
-                    vector_store_ids=[VECTOR_STORE_ID],
+                    vector_store_ids=[vector_id],
                     max_num_results=3,
                 ),
             ImageGenerationTool(
@@ -253,7 +254,7 @@ if prompt:
                     )
                     status.update(label="⏳ Attaching file...")
                     client.vector_stores.files.create(
-                        vector_store_id=VECTOR_STORE_ID,
+                        vector_store_id=vector_id,
                         file_id=uploaded_file.id,
                     )
                     status.update(label="✅ File uploaded", state="complete")
