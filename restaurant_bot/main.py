@@ -5,7 +5,7 @@ from openai import OpenAI
 import asyncio
 import streamlit as st
 import json
-from agents import Runner, SQLiteSession, InputGuardrailTripwireTriggered
+from agents import Runner, SQLiteSession, InputGuardrailTripwireTriggered, OutputGuardrailTripwireTriggered
 from models import UserAccountContext
 from my_agents.triage_agent import triage_agent
 
@@ -80,7 +80,7 @@ async def run_agent(message):
 
                     if st.session_state["agent"].name != event.new_agent.name:
                         
-                        st.write(f"🤖 Transfered from {st.session_state["agent"].name} to {event.new_agent.name}")
+                        st.write(f'🤖 Transfered from {st.session_state["agent"].name} to {event.new_agent.name}')
 
                         st.session_state["agent"] = event.new_agent
 
@@ -90,7 +90,16 @@ async def run_agent(message):
                         response = ""
 
         except InputGuardrailTripwireTriggered:
-            st.write("I can't help you with that.")
+            st.write("Input Guard Rail 작동")
+            response = "안녕하세요 :) 레스토랑 관련 문의만 도와드릴 수 있습니다. 메뉴, 주문, 예약, 불만 사항을 말씀해주세요."
+            text_placeholder.write(response)
+            await session.pop_item()
+
+        except OutputGuardrailTripwireTriggered:
+            st.write("Output Guard Rail 작동")
+            response = "Cant show you that answer."
+            text_placeholder.write(response)
+            await session.pop_item()
 
 message = st.chat_input(
     "Write a message for your assistant",

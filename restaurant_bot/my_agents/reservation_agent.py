@@ -5,7 +5,8 @@ from tools import (
     create_reservation,
     AgentToolUsageLoggingHooks,
 )
-
+from my_agents.input_guardrails import off_topic_guardrail
+from my_agents.output_guardrails import safety_output_guardrail
 
 def dynamic_reservation_agent_instructions(
     wrapper: RunContextWrapper[UserAccountContext],
@@ -57,6 +58,12 @@ Gracious, organized, and accommodating. Like a concierge who makes every occasio
 reservation_agent = Agent(
     name="Reservation Management Agent",
     instructions=dynamic_reservation_agent_instructions,
+    input_guardrails=[
+        off_topic_guardrail,
+    ],
+    output_guardrails=[
+        safety_output_guardrail
+    ],
     tools=[
         check_availability,
         create_reservation,

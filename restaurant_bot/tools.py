@@ -1,6 +1,6 @@
 import streamlit as st
 from agents import function_tool, AgentHooks, Agent, Tool, RunContextWrapper
-from models import UserAccountContext, OrderItem
+from models import UserAccountContext, OrderItem, ComplaintDetail
 from datetime import datetime
 import random
 
@@ -295,6 +295,106 @@ def cancel_order(order_number: str, reason: str = "") -> dict:
         "refund_amount": order["total_price"],
         "reason": reason,
         "message": f"주문 {order_number}이 취소되었습니다. 환불 금액은 {order['total_price']:,}원입니다."
+    }
+
+if "complaint_store" not in st.session_state:
+    st.session_state["complaint_store"] = {}
+complaint_store = st.session_state["complaint_store"]
+
+@function_tool
+def log_and_resolve_complaint(
+    complaint: ComplaintDetail,
+    resolution: str,  # "dessert" | "drink" | "discount" | "refund" | "manager_callback"
+    discount_rate: int = 0  # 0, 10, 20 (%)
+) -> dict:
+    """
+    Log a customer complaint and apply the appropriate resolution.
+    resolution options: "dessert", "drink", "discount", "refund", "manager_callback"
+    discount_rate: 10 or 20 (only used when resolution is "discount")
+    """
+    valid_resolutions = ["dessert", "drink", "discount", "refund", "manager_callback"]
+
+    if resolution not in valid_resolutions:
+        return {
+            "success": False,
+            "message": f"유효하지 않은 해결책입니다. 가능한 옵션: {valid_resolutions}"
+        }
+
+    if complaint.severity == "critical":
+        return {
+            "success": False,
+            "message": "Critical 심각도는 즉시 escalate_to_manager 툴을 사용하세요."
+        }
+
+    complaint_id = f"CMP-{datetime.now().strftime('%H%M%S')}"
+
+    resolution_message = {
+        "dessert":          "무료 디저트를 제공해드리겠습니다.",
+        "drink":            "무료 음료를 제공해드리겠습니다.",
+        "discount":         f"계산서에서 {discount_rate}% 할인을 적용해드리겠습니다.",
+        "refund":           "해당 메뉴 금액을 전액 환불해드리겠습니다.",
+        "manager_callback": "매니저가 곧 고객님께 직접 연락드릴 예정입니다.",
+    }.get(resolution, "")
+
+    # 실제 저장
+    complaint_store[complaint_id] = {
+        "customer_name": complaint.customer_name,
+        "table_number": complaint.table_number,
+        "issue_summary": complaint.issue_summary,
+        "severity": complaint.severity,
+        "incident_time": complaint.incident_time or datetime.now().isoformat(),
+        "resolution": resolution,
+        "discount_rate": discount_rate if resolution == "discount" else 0,
+        "status": "resolved",
+        "logged_at": datetime.now().isoformat()
+    }
+
+    return {
+        "success": True,
+        "complaint_id": complaint_id,
+        "customer_name": complaint.customer_name,
+        "table_number": complaint.table_number,
+        "severity": complaint.severity,
+        "resolution": resolution,
+        "resolution_message": resolution_message,
+        "message": f"불만이 접수되었습니다. {resolution_message}"
+    }
+
+
+@function_tool
+def escalate_to_manager(
+    complaint: ComplaintDetail,
+    escalation_reason: str
+) -> dict:
+    """
+    Escalate a serious complaint to the manager immediately.
+    Use for: critical severity, health/safety issues, customer requests manager, two resolution attempts failed.
+    """
+    complaint_id = f"CMP-{datetime.now().strftime('%H%M%S')}"
+
+    # 실제 저장
+    complaint_store[complaint_id] = {
+        "customer_name": complaint.customer_name,
+        "table_number": complaint.table_number,
+        "issue_summary": complaint.issue_summary,
+        "severity": complaint.severity,
+        "incident_time": complaint.incident_time or datetime.now().isoformat(),
+        "escalation_reason": escalation_reason,
+        "status": "escalated",
+        "escalated_at": datetime.now().isoformat()
+    }
+
+    callback_minutes = 5 if complaint.severity == "critical" else 10
+
+    return {
+        "success": True,
+        "complaint_id": complaint_id,
+        "customer_name": complaint.customer_name,
+        "table_number": complaint.table_number,
+        "severity": complaint.severity,
+        "escalation_reason": escalation_reason,
+        "callback_minutes": callback_minutes,
+        "message": f"매니저에게 즉시 에스컬레이션되었습니다. {callback_minutes}분 내로 고객님께 직접 연락드릴 예정입니다."
     }
 
 class AgentToolUsageLoggingHooks(AgentHooks):

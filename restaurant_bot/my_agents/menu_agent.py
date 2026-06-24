@@ -5,7 +5,8 @@ from tools import (
     check_allergens,
     AgentToolUsageLoggingHooks,
 )
-
+from my_agents.input_guardrails import off_topic_guardrail
+from my_agents.output_guardrails import safety_output_guardrail
 
 def dynamic_menu_agent_instructions(
     wrapper: RunContextWrapper[UserAccountContext],
@@ -38,7 +39,11 @@ Use the provided menu data (attached or retrieved via tool) which includes:
 ## Boundaries
 - Do NOT take orders — if the customer is ready to order, transfer to Order Agent
 - Do NOT book tables — transfer to Reservation Agent if requested
+- Do NOT resolve complaints - transfer to Complaint Agent
 - 메뉴 범위를 벗어난 질문 - transfer to Triage Agent
+
+## Critical
+- Order Agent에서 넘어온 경우 다시 Order Agent로 handoff하지 마라
 
 ## Tone
 Knowledgeable, helpful, and enthusiastic about food. Like a sommelier who loves every dish on the menu.
@@ -48,6 +53,12 @@ Knowledgeable, helpful, and enthusiastic about food. Like a sommelier who loves 
 menu_agent = Agent(
     name="Menu Management Agent",
     instructions=dynamic_menu_agent_instructions,
+    input_guardrails=[
+        off_topic_guardrail,
+    ],
+    output_guardrails=[
+        safety_output_guardrail
+    ],
     tools=[
         get_menu_items,
         check_allergens,
