@@ -1,0 +1,1043 @@
+{
+    "directed": false,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "type": "paper",
+            "title": "Agentic Abstention: Do Agents Know When to Stop Instead of Act?",
+            "weight": 10,
+            "id": "2606.28733"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "agentic abstention"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "LLM agents"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "decision-making"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "CONVOLVE"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "interaction efficiency"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "timely abstention"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "sequential decision"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "customer service"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "educational tools"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "web scraping"
+        },
+        {
+            "type": "paper",
+            "title": "JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence",
+            "weight": 10,
+            "id": "2606.14777"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "vision-language model"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "real-time interaction"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "autonomous decision-making"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "continuous perception"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "deployable system"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "interactive AI"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "video streaming"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "time awareness"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "background model"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "improved performance"
+        },
+        {
+            "type": "paper",
+            "title": "MemSlides: A Hierarchical Memory Driven Agent Framework for Personalized Slide Generation with Multi-turn Local Revision",
+            "weight": 1,
+            "id": "2606.17162"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "personalized presentation generation"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "hierarchical memory framework"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "user profile memory"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "working memory"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "tool memory"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "localized editing"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "multi-turn revision"
+        },
+        {
+            "type": "keyword",
+            "weight": 1,
+            "id": "session constraints"
+        }
+    ],
+    "edges": [
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "agentic abstention"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "LLM agents"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "decision-making"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "CONVOLVE"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "interaction efficiency"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "timely abstention"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "sequential decision"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.28733",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "LLM agents"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "decision-making"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "CONVOLVE"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "interaction efficiency"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "timely abstention"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "sequential decision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "agentic abstention",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "decision-making"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "CONVOLVE"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "interaction efficiency"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "timely abstention"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "sequential decision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "LLM agents",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "decision-making",
+            "target": "CONVOLVE"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "decision-making",
+            "target": "interaction efficiency"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "decision-making",
+            "target": "timely abstention"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "decision-making",
+            "target": "sequential decision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "decision-making",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "decision-making",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "decision-making",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "CONVOLVE",
+            "target": "interaction efficiency"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "CONVOLVE",
+            "target": "timely abstention"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "CONVOLVE",
+            "target": "sequential decision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "CONVOLVE",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "CONVOLVE",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "CONVOLVE",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interaction efficiency",
+            "target": "timely abstention"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interaction efficiency",
+            "target": "sequential decision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interaction efficiency",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interaction efficiency",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interaction efficiency",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "timely abstention",
+            "target": "sequential decision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "timely abstention",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "timely abstention",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "timely abstention",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "sequential decision",
+            "target": "customer service"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "sequential decision",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "sequential decision",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "customer service",
+            "target": "educational tools"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "customer service",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "educational tools",
+            "target": "web scraping"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "vision-language model"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "real-time interaction"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "autonomous decision-making"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "continuous perception"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "deployable system"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "interactive AI"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "video streaming"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.14777",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "real-time interaction"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "autonomous decision-making"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "continuous perception"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "deployable system"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "interactive AI"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "video streaming"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "vision-language model",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "autonomous decision-making"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "continuous perception"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "deployable system"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "interactive AI"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "video streaming"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "real-time interaction",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "autonomous decision-making",
+            "target": "continuous perception"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "autonomous decision-making",
+            "target": "deployable system"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "autonomous decision-making",
+            "target": "interactive AI"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "autonomous decision-making",
+            "target": "video streaming"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "autonomous decision-making",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "autonomous decision-making",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "autonomous decision-making",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "continuous perception",
+            "target": "deployable system"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "continuous perception",
+            "target": "interactive AI"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "continuous perception",
+            "target": "video streaming"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "continuous perception",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "continuous perception",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "continuous perception",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "deployable system",
+            "target": "interactive AI"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "deployable system",
+            "target": "video streaming"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "deployable system",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "deployable system",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "deployable system",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interactive AI",
+            "target": "video streaming"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interactive AI",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interactive AI",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "interactive AI",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "video streaming",
+            "target": "time awareness"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "video streaming",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "video streaming",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "time awareness",
+            "target": "background model"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "time awareness",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "background model",
+            "target": "improved performance"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "personalized presentation generation"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "hierarchical memory framework"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "user profile memory"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "working memory"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "tool memory"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "localized editing"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "multi-turn revision"
+        },
+        {
+            "type": "keyword-paper",
+            "weight": 1,
+            "source": "2606.17162",
+            "target": "session constraints"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "personalized presentation generation",
+            "target": "hierarchical memory framework"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "personalized presentation generation",
+            "target": "user profile memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "personalized presentation generation",
+            "target": "working memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "personalized presentation generation",
+            "target": "tool memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "personalized presentation generation",
+            "target": "localized editing"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "personalized presentation generation",
+            "target": "multi-turn revision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "personalized presentation generation",
+            "target": "session constraints"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "hierarchical memory framework",
+            "target": "user profile memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "hierarchical memory framework",
+            "target": "working memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "hierarchical memory framework",
+            "target": "tool memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "hierarchical memory framework",
+            "target": "localized editing"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "hierarchical memory framework",
+            "target": "multi-turn revision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "hierarchical memory framework",
+            "target": "session constraints"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "user profile memory",
+            "target": "working memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "user profile memory",
+            "target": "tool memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "user profile memory",
+            "target": "localized editing"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "user profile memory",
+            "target": "multi-turn revision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "user profile memory",
+            "target": "session constraints"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "working memory",
+            "target": "tool memory"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "working memory",
+            "target": "localized editing"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "working memory",
+            "target": "multi-turn revision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "working memory",
+            "target": "session constraints"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "tool memory",
+            "target": "localized editing"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "tool memory",
+            "target": "multi-turn revision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "tool memory",
+            "target": "session constraints"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "localized editing",
+            "target": "multi-turn revision"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "localized editing",
+            "target": "session constraints"
+        },
+        {
+            "type": "keyword-keyword",
+            "weight": 1,
+            "source": "multi-turn revision",
+            "target": "session constraints"
+        }
+    ]
+}
